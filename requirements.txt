@@ -1,0 +1,14 @@
+numpy
+gymnasium==0.29.1  
+ray[rllib]
+matplotlib
+pygame
+pandas
+scikit-learn
+joblib
+stable-baselines3[mpi]  
+imitation==1.0.0 
+torch>=1.9.0
+shimmy>=0.2.1
+mpi4py  
+protobuf==3.20.3
