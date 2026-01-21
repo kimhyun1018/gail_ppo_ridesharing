@@ -4,12 +4,7 @@
   <img src="assets/trained_agent.gif" width="700" />
 </p>
 
-This repository implements an **end-to-end imitation-to-reinforcement learning pipeline**
-for autonomous ride-sharing in a custom grid-based shuttle environment.
-The framework combines **expert demonstration collection**,  
-**Generative Adversarial Imitation Learning (GAIL)**, and  
-**policy refinement via Proximal Policy Optimization (PPO)**,  
-with quantitative comparison against **Google OR-Tools** baselines.
+This repository implements an **end-to-end imitation-to-reinforcement learning pipeline** for autonomous ride-sharing in a custom grid-based shuttle environment. The framework combines **expert demonstration collection**, **Generative Adversarial Imitation Learning (GAIL)**, and **policy refinement via Proximal Policy  Otimization (PPO)**, with quantitative comparison against **Google OR-Tools** baselines.
 
 The project is designed as a **research platform**, not a minimal example, and includes
 environment definitions, data generation utilities, Dockerized execution,
@@ -19,16 +14,21 @@ trained models, and evaluation scripts.
 
 ## High-Level Pipeline
 
-Manual Expert Control
-↓
-Expert Demonstrations (HDF5 / NPZ)
-↓
-GAIL (Adversarial Imitation Learning)
-↓
-PPO Fine-Tuning (Policy Refinement)
-↓
-Evaluation & Benchmarking (OR-Tools)
+## Learning Pipeline
 
+```mermaid
+flowchart TD
+    A[Manual Expert Control]
+    B[Expert Demonstrations<br/>(HDF5 / NPZ)]
+    C[GAIL<br/>(Adversarial Imitation Learning)]
+    D[PPO Fine-Tuning]
+    E[Evaluation & Benchmarking<br/>(OR-Tools)]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+```
 
 The learned policy is first shaped by expert behavior and then optimized to improve
 efficiency, generalization, and robustness under stochastic passenger demand.
@@ -54,17 +54,22 @@ The environment is implemented in `env/env_GAIL.py` and is compatible with:
 
 ## Repository Structure
 
-├── env/ # Shuttle environment (Gymnasium-compatible)
-├── data/
-│ ├── expert_demonstration/ # Recorded expert trajectories (HDF5 / NPZ)
-│ └── passenger_logs/ # Runtime statistics and logs
-├── IL_scripts/ # Imitation learning (BC, GAIL, expert tools)
-├── RL_scripts/ # PPO training and policy definitions
-├── IL_models/ # Trained BC and GAIL checkpoints
-├── RL_models/ # PPO fine-tuned models and TensorBoard logs
-├── Dockerfile # Reproducible execution environment
-├── requirements.txt # Python dependencies
-└── LICENSE # MIT License
+```mermaid
+flowchart TD
+    ROOT[gail_ppo_ridesharing]
+
+    ROOT --> ENV[env/<br/>Gymnasium Environment]
+    ROOT --> DATA[data/]
+    ROOT --> IL[IL_scripts/<br/>Imitation Learning]
+    ROOT --> RL[RL_scripts/<br/>Reinforcement Learning]
+    ROOT --> ILM[IL_models/<br/>BC & GAIL Checkpoints]
+    ROOT --> RLM[RL_models/<br/>PPO Checkpoints & Logs]
+    ROOT --> DOCKER[Dockerfile]
+    ROOT --> REQ[requirements.txt]
+
+    DATA --> DEMO[expert_demonstration/<br/>HDF5 / NPZ]
+    DATA --> LOGS[passenger_logs/]
+```
 
 
 ---
