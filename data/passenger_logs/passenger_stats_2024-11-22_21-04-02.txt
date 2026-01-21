@@ -1,0 +1,16 @@
+2024-11-22 21:04:02,980 - INFO - 
+Episode Summary - Successfully Served Passengers:
+
+2024-11-22 21:04:02,980 - INFO - Passenger  Trip Distance   Waiting Time    Traveling Time  Total Time      Shuttle   
+2024-11-22 21:04:02,981 - INFO - Pickup                    Dropoff                   Generate Step       
+2024-11-22 21:04:02,981 - INFO - ============================================================================================================================================
+2024-11-22 21:04:02,981 - INFO - P2         5               9               8               17              0          (1, 2)                    (6, 2)                    0                    Pickup Step: 9          Dropoff Step: 17        
+2024-11-22 21:04:02,981 - INFO - P3         10              12              10              22              0          (2, 1)                    (6, 7)                    0                    Pickup Step: 12         Dropoff Step: 22        
+2024-11-22 21:04:02,981 - INFO - P4         11              20              11              31              0          (0, 5)                    (8, 8)                    10                   Pickup Step: 30         Dropoff Step: 41        
+2024-11-22 21:04:02,981 - INFO - P6         8               25              12              37              0          (2, 2)                    (0, 8)                    30                   Pickup Step: 55         Dropoff Step: 67        
+2024-11-22 21:04:02,981 - INFO - P5         13              28              34              62              0          (2, 9)                    (7, 1)                    20                   Pickup Step: 48         Dropoff Step: 82        
+2024-11-22 21:04:02,981 - INFO - P1         7               6               81              87              0          (1, 4)                    (8, 4)                    0                    Pickup Step: 6          Dropoff Step: 87        
+2024-11-22 21:04:02,981 - INFO - ============================================================================================================================================
+2024-11-22 21:04:02,981 - INFO - 
+End of Episode Summary
+

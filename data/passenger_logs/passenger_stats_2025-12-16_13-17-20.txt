@@ -1,0 +1,16 @@
+2025-12-16 13:17:20,453 - INFO - 
+Episode Summary - Successfully Served Passengers:
+
+2025-12-16 13:17:20,453 - INFO - Passenger  Trip Distance   Waiting Time    Traveling Time  Total Time      Shuttle   
+2025-12-16 13:17:20,453 - INFO - Pickup                    Dropoff                   Generate Step       
+2025-12-16 13:17:20,453 - INFO - ============================================================================================================================================
+2025-12-16 13:17:20,454 - INFO - P3         3               15              4               19              0          (9, 4)                    (9, 7)                    0                    Pickup Step: 15         Dropoff Step: 19        
+2025-12-16 13:17:20,454 - INFO - P2         5               20              11              31              0          (9, 8)                    (9, 3)                    0                    Pickup Step: 20         Dropoff Step: 31        
+2025-12-16 13:17:20,454 - INFO - P4         9               18              9               27              0          (8, 1)                    (9, 9)                    10                   Pickup Step: 28         Dropoff Step: 37        
+2025-12-16 13:17:20,454 - INFO - P5         7               22              7               29              0          (4, 9)                    (9, 7)                    20                   Pickup Step: 42         Dropoff Step: 49        
+2025-12-16 13:17:20,454 - INFO - P6         2               26              3               29              0          (6, 5)                    (6, 7)                    30                   Pickup Step: 56         Dropoff Step: 59        
+2025-12-16 13:17:20,454 - INFO - P1         2               6               60              66              0          (5, 0)                    (6, 1)                    0                    Pickup Step: 6          Dropoff Step: 66        
+2025-12-16 13:17:20,454 - INFO - ============================================================================================================================================
+2025-12-16 13:17:20,454 - INFO - 
+End of Episode Summary
+
