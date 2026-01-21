@@ -12,22 +12,17 @@ trained models, and evaluation scripts.
 
 ---
 
-## High-Level Pipeline
-
 ## Learning Pipeline
 
 ```mermaid
 flowchart TD
     A[Manual Expert Control]
-    B[Expert Demonstrations<br/>(HDF5 / NPZ)]
-    C[GAIL<br/>(Adversarial Imitation Learning)]
+    B[Expert Demonstrations (HDF5 / NPZ)]
+    C[GAIL (Adversarial Imitation Learning)]
     D[PPO Fine-Tuning]
-    E[Evaluation & Benchmarking<br/>(OR-Tools)]
+    E[Evaluation & Benchmarking (OR-Tools)]
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
+    A --> B --> C --> D --> E
 ```
 
 The learned policy is first shaped by expert behavior and then optimized to improve
