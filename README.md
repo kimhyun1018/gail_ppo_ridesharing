@@ -16,13 +16,16 @@ trained models, and evaluation scripts.
 
 ```mermaid
 flowchart TD
-    A[Manual Expert Control]
-    B[Expert Demonstrations (HDF5 / NPZ)]
-    C[GAIL (Adversarial Imitation Learning)]
-    D[PPO Fine-Tuning]
-    E[Evaluation & Benchmarking (OR-Tools)]
+    A["Manual Expert Control"]
+    B["Expert Demonstrations (HDF5 / NPZ)"]
+    C["GAIL (Adversarial Imitation Learning)"]
+    D["PPO Fine-Tuning"]
+    E["Evaluation & Benchmarking (OR-Tools)"]
 
-    A --> B --> C --> D --> E
+    A --> B
+    B --> C
+    C --> D
+    D --> E
 ```
 
 The learned policy is first shaped by expert behavior and then optimized to improve
