@@ -130,21 +130,51 @@ PPO scripts and policy definitions are in `RL_scripts/`.
 
 ---
 
-## Evaluation and Benchmarking
+## Benchmarking Framework
 
-The trained agent can be evaluated using:
+To provide a comprehensive evaluation of the learned policy, the repository includes multiple baseline methods spanning both offline optimization and online heuristic strategies.
 
-- Visual rollout inspection
-- Episode-level reward statistics
-- Comparison against **Google OR-Tools** routing solutions
+### Implemented Methods
 
-Evaluation scripts support:
+- **Offline DARP (OR-Tools)**  
+  A deterministic Dial-a-Ride Problem (DARP) formulation solved using Google OR-Tools. This method assumes full knowledge of all requests and serves as a reference for near-optimal routing performance.
 
-- Deterministic or stochastic rollouts
-- Rendering via Matplotlib
-- Side-by-side performance analysis
+- **Nearest-Neighbor Heuristic**  
+  A greedy online strategy that selects the next task (pickup or drop-off) based on minimum Manhattan distance. This provides a simple and interpretable baseline for real-time routing.
 
----
+- **Wait-Time-Aware Heuristic**  
+  An online heuristic that incorporates both spatial proximity and accumulated passenger waiting time, enabling more balanced service decisions under dynamic demand.
+
+- **GAIL + PPO (Proposed Method)**  
+  A learning-based policy trained through imitation learning followed by reinforcement learning, designed to operate under stochastic and sequential decision-making conditions.
+
+### Evaluation Design
+
+All methods are evaluated under a consistent experimental setup:
+
+- Identical realized demand scenarios across episodes  
+- Fixed episode horizon and environment dynamics  
+- Episode-level performance metrics, including:
+  - Waiting time  
+  - In-vehicle travel time  
+  - Total service time  
+
+In addition to aggregate statistics, the evaluation supports:
+
+- Episode-level comparisons  
+- Distributional analysis (e.g., ECDFs)  
+- Win-rate and paired performance analysis  
+
+### Repository Components
+
+The benchmarking framework is implemented in the `benchmark/` directory and includes:
+
+- Offline optimization scripts (OR-Tools)
+- Online heuristic implementations
+- Performance aggregation and statistical analysis utilities
+
+Representative outputs are provided in:
+
 
 ## Docker and Reproducibility
 
