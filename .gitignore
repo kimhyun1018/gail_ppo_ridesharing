@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# RL models / checkpoints
+RL_models/
+*.zip
+
+# Logs
+*.txt
+
+# Large generated outputs
+data/passenger_logs/
+data/rl_performance_eval/
+data/realized_demand_eval/
+data/offline_benchmark/
+data/online_nearest_benchmark/
+data/online_wait_t_aware_benchmark/
+
+data/benchmark_analysis/
+data/benchmark_episode_comparison.csv
+data/benchmark_episode_comparison_p_diff.csv
+data/benchmark_episode_comparison_with_winrates.csv
+data/benchmark_stats_summary.csv
+data/benchmark_winrate_summary.csv

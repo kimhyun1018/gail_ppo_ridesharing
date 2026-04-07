@@ -1,0 +1,10 @@
+comparison_metric,rl_win_rate,n_valid_episodes
+rl_vs_offline_wait_t_win,0.386,1000
+rl_vs_offline_invehicle_t_win,0.419,1000
+rl_vs_offline_service_t_win,0.323,1000
+rl_vs_nearest_wait_t_win,0.016,1000
+rl_vs_nearest_invehicle_t_win,0.168,1000
+rl_vs_nearest_service_t_win,0.001,1000
+rl_vs_wait_t_aware_wait_t_win,0.007,1000
+rl_vs_wait_t_aware_invehicle_t_win,0.323,1000
+rl_vs_wait_t_aware_service_t_win,0.006,1000

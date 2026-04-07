@@ -1,0 +1,113 @@
+{
+  "episode_id": 1000,
+  "model_path": "/tf/rl_project/RL_models/11_17/RL3.zip",
+  "total_reward": 7.852867243867244,
+  "steps": 86,
+  "env_time": 86,
+  "num_passengers_generated": 6,
+  "num_passengers_served": 6,
+  "passengers": [
+    {
+      "name": "P1",
+      "origin": [
+        8,
+        2
+      ],
+      "destination": [
+        2,
+        6
+      ],
+      "request_time": 0,
+      "pickup_time": 7,
+      "dropoff_time": 18,
+      "waiting_time": 7,
+      "in_vehicle_time": 11,
+      "service_time": 18
+    },
+    {
+      "name": "P3",
+      "origin": [
+        2,
+        2
+      ],
+      "destination": [
+        0,
+        8
+      ],
+      "request_time": 0,
+      "pickup_time": 22,
+      "dropoff_time": 34,
+      "waiting_time": 22,
+      "in_vehicle_time": 12,
+      "service_time": 34
+    },
+    {
+      "name": "P5",
+      "origin": [
+        3,
+        0
+      ],
+      "destination": [
+        9,
+        3
+      ],
+      "request_time": 20,
+      "pickup_time": 46,
+      "dropoff_time": 55,
+      "waiting_time": 26,
+      "in_vehicle_time": 9,
+      "service_time": 35
+    },
+    {
+      "name": "P4",
+      "origin": [
+        4,
+        0
+      ],
+      "destination": [
+        7,
+        8
+      ],
+      "request_time": 10,
+      "pickup_time": 47,
+      "dropoff_time": 63,
+      "waiting_time": 37,
+      "in_vehicle_time": 16,
+      "service_time": 53
+    },
+    {
+      "name": "P6",
+      "origin": [
+        1,
+        4
+      ],
+      "destination": [
+        1,
+        0
+      ],
+      "request_time": 30,
+      "pickup_time": 73,
+      "dropoff_time": 78,
+      "waiting_time": 43,
+      "in_vehicle_time": 5,
+      "service_time": 48
+    },
+    {
+      "name": "P2",
+      "origin": [
+        0,
+        1
+      ],
+      "destination": [
+        4,
+        4
+      ],
+      "request_time": 0,
+      "pickup_time": 41,
+      "dropoff_time": 86,
+      "waiting_time": 41,
+      "in_vehicle_time": 45,
+      "service_time": 86
+    }
+  ]
+}
